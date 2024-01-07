@@ -13,4 +13,5 @@ module.exports = {
       // 他のページも同様に追加
     };
   },
+  output: "export",
 };
