@@ -20,4 +20,5 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-        # next export は削除されました
+        env:
+        NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}

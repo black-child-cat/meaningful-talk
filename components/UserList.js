@@ -1,6 +1,7 @@
 // components/UserList.js
 import Link from "next/link";
 import UsersImage from "../components/UsersImage.js";
+const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 
 const getColorClass = (value) => {
   if (value <= 25) return "text-pink-200";
@@ -18,7 +19,7 @@ const UserList = ({ users }) => {
             <div className="avatar">
               <div className="w-12 rounded-full">
                 <UsersImage
-                  src={`/images/users/` + user.image}
+                  src={imagePath + `users/` + user.image}
                   alt="説明"
                   width={500}
                   height={500}

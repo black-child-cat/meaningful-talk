@@ -3,6 +3,8 @@ import UsersImage from "../UsersImage.js";
 // ユーザー情報
 import users from "../../data/users";
 
+const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
+
 const MessageLady = ({ message }) => {
   const user = users.find((user) => user.id === message.sender);
   return (
@@ -10,7 +12,7 @@ const MessageLady = ({ message }) => {
       <div className="chat-image avatar">
         <div className="w-12 rounded-full">
           <UsersImage
-            src={`/images/users/` + user.image}
+            src={imagePath + `users/` + user.image}
             className="border border-gray-300 rounded-full"
             alt="ユーザーのアイコン"
             width={500}

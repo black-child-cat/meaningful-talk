@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 const isProd = process.env.NODE_ENV === "production";
+const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/myimage.png`;
 
 module.exports = {
   // GitHub Pages用に設定
   assetPrefix: isProd ? "/meaningful-talk/" : "",
   basePath: isProd ? "/meaningful-talk" : "",
+  publicRuntimeConfig: {
+    basePath: isProd ? "/meaningful-talk" : "",
+  },
   exportPathMap: async function () {
     const paths = {
       "/": { page: "/" },

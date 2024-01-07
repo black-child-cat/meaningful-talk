@@ -1,9 +1,10 @@
 // components/MyImageComponent.js
 import Image from "next/image";
+const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 
 const MyImageComponent = () => (
   <Image
-    src="/images/lady-02.jpg" // 画像のパス
+    src={`${imagePath}lady-02.jpg`} // 画像のパス
     // src="/next.svg"
     className="border border-gray-300 rounded-full"
     alt="女性のアイコン画像" // 画像の説明
