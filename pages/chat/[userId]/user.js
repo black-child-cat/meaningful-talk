@@ -2,28 +2,32 @@ import { useRouter } from "next/router";
 import MyTabs from "../../../components/MyTabs";
 import MessagesDisplay from "../../../components/chat/MessagesDisplay.js";
 import SendMessage from "../../../components/chat/SendMessage.js";
-import Link from "next/link";
 
 import users from "../../../data/users";
 
-const UserSubPage = () => {
-  const router = useRouter();
-  const { userId } = router.query;
-  const user = users.find((user) => user.id === userId);
+export async function getStaticPaths() {
+  // `users` データからすべての可能な `userId` を取得します
+  const paths = users.map((user) => ({
+    params: { userId: user.id },
+  }));
 
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  // `params.userId` を使用して必要なデータを取得します
+  const user = users.find((user) => user.id === params.userId);
+
+  // ユーザーが存在しない場合は、404ページを表示する
   if (!user) {
-    return (
-      <div className="max-w-lg w-full mx-auto border-x border-gray-100">
-        <div className="p-3 flex flex-col gap-3">
-          <h1 className="">ユーザーが見つかりません。</h1>
-          <Link href="/" className="">
-            TOPページに戻る
-          </Link>
-        </div>
-      </div>
-    );
+    return { notFound: true };
   }
 
+  return { props: { user } };
+}
+
+const UserSubPage = ({ user }) => {
+  // `user` は `getStaticProps` から直接受け取る
   return (
     <div className="h-full flex flex-col">
       <div className="border-b border-gray-100 px-3 py-1">

@@ -27,5 +27,8 @@ module.exports = {
 
     return paths;
   },
+  images: {
+    unoptimized: true,
+  },
   output: "export",
 };
