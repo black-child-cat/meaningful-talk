@@ -1,0 +1,31 @@
+/* styles/globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans+JP:wght@400;500;600&display=swap");
+
+:root {
+  --font-base: -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, Roboto, Noto Sans JP,
+    游ゴシック Medium, 游ゴシック, Yu Gothic, Yu Gothic Medium, Meiryo, Arial,
+    sans-serif;
+}
+.c-title {
+  font-family: "Darumadrop One", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  word-break: break-word;
+  word-wrap: break-word;
+  line-break: strict;
+  text-size-adjust: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radial-progress {
+  height: var(--size);
+  width: var(--size);
+  --size: 3rem;
+  --thickness: calc(var(--size) / 10);
+}
