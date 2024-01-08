@@ -42,6 +42,37 @@ const ChatPage = ({ user }) => {
 
       <div className="p-3 flex-grow">
         <div className="bg-gray-100 rounded-lg p-3 min-h-[70vh]">
+          <div className="rounded-md sticky top-3 z-10 mb-1">
+            <button
+              className="btn bg-white text-gray-500 rounded-md w-full"
+              onClick={() =>
+                document.getElementById("user_info_modal").showModal()
+              }
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width={20}
+                height={20}
+              >
+                <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM20 17H24V19H20V17ZM17 12H24V14H17V12ZM19 7H24V9H19V7Z"></path>
+              </svg>
+              <span className="text-[1rem]">ユーザー情報</span>
+            </button>
+            <dialog id="user_info_modal" className="modal">
+              <div className="modal-box py-3 px-4">
+                <h3 className="font-bold text-lg">ユーザー情報の表示</h3>
+                <p className="py-2 text-xs">
+                  ユーザーが会話を続けるに値する相手なのか？女性が判断しやすい情報を表示する。
+                  予約頻度とかトーク数に対する予約回数の比率とか、女性評価の内容など
+                </p>
+              </div>
+              <form method="dialog" className="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
+          </div>
           <MessagesDisplay roomId={user.id} />
         </div>
       </div>

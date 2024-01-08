@@ -29,14 +29,6 @@ const MessagesDisplay = ({ roomId }) => {
             return "";
           }
         }
-        return (
-          <div key={index}>
-            <p>送信者: {message.sender}</p>
-            <p>宛先: {message.address}</p>
-            <p>日時: {message.timestamp}</p>
-            <p>内容: {message.content}</p>
-          </div>
-        );
       })}
     </div>
   );

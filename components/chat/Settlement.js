@@ -8,9 +8,9 @@ function Settlement() {
         </p>
         <div className="flex flex-col gap-2 border-t border-gray-100 pt-2">
           <div className="flex flex-col gap-1 border-b border-gray-100">
-            <span className="font-bold text-xs">購入枠N回分</span>
-            <div className="flex items-center gap-2 justify-between">
-              <p className="">トーク券 （1,500円） ×</p>
+            <span className="font-bold text-xs">購入枚数</span>
+            <div className="flex items-center gap-2 justify-between bg-gray-100 p-1 rounded-md">
+              <p className="pl-1">トーク券 （1,500円） ×</p>
               <select className="select select-bordered select-sm">
                 <option disabled selected>
                   1枚

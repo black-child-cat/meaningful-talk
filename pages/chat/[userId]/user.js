@@ -39,7 +39,7 @@ const UserSubPage = ({ user }) => {
       <div className="p-3 flex-grow">
         <div className="bg-gray-100 rounded-lg p-3 min-h-[70vh]">
           <div className="bg-yellow-100 border border-yellow-500 p-3 mb-3 rounded-md sticky top-3 z-10">
-            <div className="flex gap-1 items-center pb-1">
+            <div className="flex gap-1 items-center pb-1 text-gray-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -1 24 24"

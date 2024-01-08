@@ -1,4 +1,3 @@
-// components/MyImageComponent.js
 import Image from "next/image";
 const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 

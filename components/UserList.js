@@ -4,10 +4,10 @@ import UsersImage from "../components/UsersImage.js";
 const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 
 const getColorClass = (value) => {
-  if (value <= 25) return "text-gray-200";
-  if (value <= 50) return "text-gray-300";
-  if (value <= 75) return "text-gray-400";
-  return "text-gray-500";
+  if (value <= 25) return "text-red-200";
+  if (value <= 50) return "text-yellow-300";
+  if (value <= 75) return "text-yellow-400";
+  return "text-green-400";
 };
 
 const UserList = ({ users }) => {
@@ -27,7 +27,7 @@ const UserList = ({ users }) => {
               </div>
             </div>
             <div className="">
-              <div className="font-bold">{user.name}</div>
+              <div className="font-bold text-gray-800">{user.name}</div>
               <div className="text-gray-500 text-sm flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
