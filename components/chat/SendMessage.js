@@ -43,7 +43,7 @@ const SendMessage = ({ sender, address }) => {
       {address === "lady" && count < 3 ? (
         <textarea
           maxLength={200}
-          className="w-full textarea border-gray-300"
+          className="w-full textarea border-gray-300 text-[16px]"
           placeholder="女性宛にメッセージを送ってね"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
@@ -51,7 +51,7 @@ const SendMessage = ({ sender, address }) => {
       ) : address === "lady" ? (
         <textarea
           maxLength={200}
-          className="w-full textarea border-gray-300"
+          className="w-full textarea border-gray-300 text-[16px]"
           placeholder="送信上限に達しました。制限解除を行うか、予約することで送信数を増やせます。"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
@@ -59,7 +59,7 @@ const SendMessage = ({ sender, address }) => {
         />
       ) : (
         <textarea
-          className="w-full textarea border-gray-300"
+          className="w-full textarea border-gray-300 text-[16px]"
           placeholder="ユーザーに向けて自由にメッセージを送ってね"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}

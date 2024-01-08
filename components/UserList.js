@@ -4,10 +4,10 @@ import UsersImage from "../components/UsersImage.js";
 const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 
 const getColorClass = (value) => {
-  if (value <= 25) return "text-pink-200";
-  if (value <= 50) return "text-pink-300";
-  if (value <= 75) return "text-pink-400";
-  return "text-pink-500";
+  if (value <= 25) return "text-gray-200";
+  if (value <= 50) return "text-gray-300";
+  if (value <= 75) return "text-gray-400";
+  return "text-gray-500";
 };
 
 const UserList = ({ users }) => {
@@ -42,7 +42,7 @@ const UserList = ({ users }) => {
               </div>
             </div>
             <div className="ml-auto border-l border-gray-100 pl-3 flex items-center gap-2">
-              <p className="text-xs text-gray-400">女性評価</p>
+              <p className="text-xs text-gray-400 pr-1">女性評価</p>
               <div
                 className={`radial-progress text-xs ${getColorClass(
                   user.score
