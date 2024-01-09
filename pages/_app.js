@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     <div className="h-screen flex flex-col bg-white">
       <div
         role="alert"
-        className="alert alert-warning rounded-none p-2 gap-1 flex items-center justify-center bg-yellow-300"
+        className="alert alert-warning rounded-none p-1 gap-1 flex items-center justify-center bg-yellow-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
