@@ -19,7 +19,7 @@ const UserList = ({ users }) => {
             <div className="">
               <div className="w-12 rounded-full">
                 <UsersImage
-                  className={`aspect-square h-auto w-auto rounded-full`}
+                  className={`aspect-square h-auto w-auto rounded-full bg-gray-200`}
                   src={imagePath + `users/` + user.image}
                   alt="説明"
                   width={500}

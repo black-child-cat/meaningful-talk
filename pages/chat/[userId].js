@@ -44,7 +44,7 @@ const ChatPage = ({ user }) => {
         <div className="bg-gray-100 rounded-lg p-3 min-h-[70vh]">
           <div className="rounded-md sticky top-3 z-10 mb-1">
             <button
-              className="btn bg-white text-gray-500 rounded-md w-full"
+              className="btn bg-white text-gray-500 rounded-md w-full h-10 min-h-0"
               onClick={() =>
                 document.getElementById("user_info_modal").showModal()
               }
