@@ -16,9 +16,10 @@ const UserList = ({ users }) => {
       {users.map((user) => (
         <li key={user.id} className="border-t border-gray-100">
           <Link href={`/chat/${user.id}`} className="flex gap-3 px-3 py-2">
-            <div className="avatar">
+            <div className="">
               <div className="w-12 rounded-full">
                 <UsersImage
+                  className={`aspect-square h-auto w-auto rounded-full`}
                   src={imagePath + `users/` + user.image}
                   alt="説明"
                   width={500}
@@ -27,8 +28,10 @@ const UserList = ({ users }) => {
               </div>
             </div>
             <div className="">
-              <div className="font-bold text-gray-800">{user.name}</div>
-              <div className="text-gray-500 text-sm flex items-center">
+              <div className="font-bold text-gray-800 line-clamp-1">
+                {user.name}
+              </div>
+              <div className="text-gray-500 text-xs flex items-center pt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="1 0 24 24"
@@ -42,7 +45,9 @@ const UserList = ({ users }) => {
               </div>
             </div>
             <div className="ml-auto border-l border-gray-100 pl-3 flex items-center gap-2">
-              <p className="text-xs text-gray-400 pr-1">女性評価</p>
+              <p className="text-xs text-gray-400 pr-1 whitespace-nowrap">
+                女性評価
+              </p>
               <div
                 className={`radial-progress text-xs ${getColorClass(
                   user.score

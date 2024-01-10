@@ -46,8 +46,8 @@ const SendMessage = ({ sender, address }) => {
         <textarea
           maxLength={200}
           className="w-full textarea border-gray-300 bg-white text-[16px]"
-          placeholder="送信上限に達しました。制限解除を行うか、予約することで送信数を増やせます。"
-          value={messageText}
+          placeholder="送信回数の上限に達しました。制限解除または予約で送信数を増やせます。"
+          value="送信回数の上限に達しました。制限解除または予約で送信数を増やせます。"
           onChange={(e) => setMessageText(e.target.value)}
           disabled
         />

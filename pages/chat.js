@@ -3,7 +3,7 @@ import UserList from "../components/UserList";
 import users from "../data/users";
 const IndexPage = () => {
   return (
-    <div className="">
+    <div className="max-w-lg mx-auto flex flex-col">
       <div className="py-2 px-3">
         <p className="text-gray-700 font-bold text-center pb-1">
           仮想ユーザーランクの高い順に並んでるよ

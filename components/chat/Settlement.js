@@ -32,6 +32,7 @@ function Settlement() {
               type="text"
               placeholder="1234 5678 9100"
               className="input input-bordered w-full"
+              value={`1234 5678 9100`}
               disabled
             />
           </div>
@@ -41,6 +42,7 @@ function Settlement() {
               <input
                 type="text"
                 placeholder="12/34"
+                value="12/34"
                 className="input input-bordered w-full"
                 disabled
               />
@@ -50,6 +52,7 @@ function Settlement() {
               <input
                 type="password"
                 placeholder="123"
+                value="123"
                 className="input input-bordered w-full"
                 disabled
               />
@@ -60,6 +63,7 @@ function Settlement() {
             <input
               type="text"
               placeholder="OKANE SEIGI"
+              value="OKANE SEIGI"
               className="input input-bordered w-full"
               disabled
             />

@@ -5,7 +5,7 @@ const imagePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/images/`;
 
 const IndexPage = () => {
   return (
-    <div className="">
+    <div className="max-w-lg mx-auto flex flex-col">
       <div>
         <Image src={imagePath + `main.jpg`} alt="" width={700} height={700} />
       </div>
@@ -21,7 +21,10 @@ const IndexPage = () => {
         </p>
       </div>
       <div className="flex flex-col gap-3 p-3">
-        <Link href={`chat`} className="btn bg-gray-800 text-white">
+        <Link
+          href={`chat`}
+          className="btn bg-gray-800 text-white rounded-lg shadow-md"
+        >
           <span className="text-[1.05rem]">オモニトークを試してみる</span>
         </Link>
         <p className="text-gray-500 text-sm bg-gray-100 py-2 px-4 rounded-lg">

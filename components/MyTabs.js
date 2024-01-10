@@ -8,7 +8,7 @@ const MyTabs = ({ type, user }) => {
       <div role="tablist" className="tabs tabs-boxed grid-cols-2 bg-gray-100">
         <Link
           href={`/chat/${user.id}`}
-          className={`tab h-10 ${
+          className={`tab h-9 ${
             type === "lady" ? "bg-gray-800 text-white font-bold" : ""
           }`}
         >
@@ -16,7 +16,7 @@ const MyTabs = ({ type, user }) => {
         </Link>
         <Link
           href={`/chat/${user.id}/user`}
-          className={`tab h-10 ${
+          className={`tab h-9 ${
             type === "user" ? "bg-gray-800 text-white font-bold" : ""
           }`}
         >

@@ -40,7 +40,7 @@ const ChatPage = ({ user }) => {
       </div>
       <MyTabs type={"lady"} user={user} />
 
-      <div className="p-3 flex-grow">
+      <div className="p-3 pt-2 flex-grow">
         <div className="bg-gray-100 rounded-lg p-3 min-h-[70vh]">
           <div className="rounded-md sticky top-3 z-10 mb-1">
             <button
