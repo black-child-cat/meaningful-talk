@@ -27,6 +27,7 @@ const SendMessage = ({ sender, address }) => {
         address: address,
         timestamp: getCurrentTimeFormatted(),
         content: messageText,
+        stamp: null,
       });
       setMessageText(""); // テキストエリアをクリア
     }
@@ -93,7 +94,7 @@ const SendMessage = ({ sender, address }) => {
               </svg>
               スタンプ
             </button>
-            <Stamp />
+            <Stamp sender={sender} address={address} />
           </>
         )}
 

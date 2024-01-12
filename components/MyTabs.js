@@ -4,7 +4,7 @@ import Link from "next/link";
 const MyTabs = ({ type, user }) => {
   console.log(user.id);
   return (
-    <div className="px-3 pt-3">
+    <div className="px-3 pt-2">
       <div role="tablist" className="tabs tabs-boxed grid-cols-2 bg-gray-100">
         <Link
           href={`/chat/${user.id}`}

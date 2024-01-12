@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { ChatContext } from "../chat/ChatContext";
 import MessageLady from "../chat/MessageLady";
 import MessageUser from "../chat/MessageUser";
+import MessagesStamp from "../chat/MessagesStamp";
 
 // ユーザー情報
 import users from "../../data/users";
@@ -10,6 +11,7 @@ import users from "../../data/users";
 const MessagesDisplay = ({ roomId }) => {
   const { messages } = useContext(ChatContext);
   const address = messages.address;
+  console.log(messages);
   return (
     <div>
       {messages.map((message, index) => {
@@ -17,7 +19,11 @@ const MessagesDisplay = ({ roomId }) => {
           // メッセージの送り主が女性の場合
           const user = users.find((user) => user.id === message.address);
           if (roomId === message.address) {
-            return <MessageLady key={index} message={message} />;
+            if (message.stamp !== null) {
+              return <MessagesStamp key={index} message={message} />;
+            } else {
+              return <MessageLady key={index} message={message} />;
+            }
           } else {
             return "";
           }
