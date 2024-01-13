@@ -58,7 +58,10 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="改善案をブラッシュアップして負担軽減の具体策を考えるサイト"
         />
-        <meta property="og:image" content={imagePath + `ogp.jpg`} />
+        <meta
+          property="og:image"
+          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.jpg`}
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -70,7 +73,10 @@ function MyApp({ Component, pageProps }) {
           property="twitter:description"
           content="改善案をブラッシュアップして負担軽減の具体策を考えるサイト"
         />
-        <meta property="twitter:image" content={imagePath + `ogp.jpg`} />
+        <meta
+          property="twitter:image"
+          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.jpg`}
+        />
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🐈‍⬛</text></svg>"
