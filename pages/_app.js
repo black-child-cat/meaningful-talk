@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.jpg`}
+          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.jpg`}
+          content={`https://black-child-cat.github.io/meaningful-talk/images/ogp.png`}
         />
         <link
           rel="icon"
