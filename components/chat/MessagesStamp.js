@@ -11,7 +11,7 @@ const MessageLady = ({ message }) => {
           <LadyImage />
         </div>
       </div>
-      <div className="chat-bubble bg-pink-300 text-gray-700 w-full max-w-full">
+      <div className="chat-bubble bg-pink-200 text-gray-700 w-full py-4">
         <Image
           src={`${imagePath}stamp/${message.stamp}`}
           alt="スタンプ画像"

@@ -36,17 +36,20 @@ const SendMessage = ({ sender, address }) => {
   return (
     <div className="p-3 sticky bottom-[0] bg-white border-t border-gray-100">
       {address === "lady" && count < 3 ? (
-        <textarea
-          maxLength={200}
-          className="w-full textarea border-gray-300 bg-white text-[16px]"
-          placeholder="女性宛にメッセージを送ってね"
-          value={messageText}
-          onChange={(e) => setMessageText(e.target.value)}
-        />
+        <>
+          {/* ユーザー側投稿フォーム（送信可能状態） */}
+          <textarea
+            maxLength={200}
+            className="w-full leading-[1.5] textarea border-gray-300 bg-white text-[16px]"
+            placeholder="女性宛にメッセージを送ってね"
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+          />
+        </>
       ) : address === "lady" ? (
         <textarea
           maxLength={200}
-          className="w-full textarea border-gray-300 bg-white text-[16px]"
+          className="w-full leading-[1.5] textarea border-gray-300 bg-white text-[16px]"
           placeholder="送信回数の上限に達しました。制限解除または予約で送信数を増やせます。"
           value="送信回数の上限に達しました。制限解除または予約で送信数を増やせます。"
           onChange={(e) => setMessageText(e.target.value)}
@@ -54,8 +57,8 @@ const SendMessage = ({ sender, address }) => {
         />
       ) : (
         <textarea
-          className="w-full textarea border-gray-300 bg-white text-[16px]"
-          placeholder="ユーザーに向けて自由にメッセージを送ってね"
+          className="w-full leading-[1.5] textarea border-gray-300 bg-white text-[16px]"
+          placeholder="自由にメッセージを送ってね。送信内容は他の人には分からないよ。"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
         />
@@ -68,7 +71,7 @@ const SendMessage = ({ sender, address }) => {
         ) : address === "lady" ? (
           <>
             <button
-              className="btn btn-sm bg-indigo-500 text-white rounded-md"
+              className="btn btn-sm bg-blue-500 text-white rounded-md"
               onClick={() =>
                 document.getElementById("settlement_modal").showModal()
               }

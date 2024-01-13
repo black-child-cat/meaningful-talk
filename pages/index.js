@@ -17,13 +17,16 @@ const IndexPage = () => {
           女性<span className="text-[4rem]">の</span>負担
         </h1>
         <p className="pt-8 text-md">
-          ここに男性が問題意識を持つような文章を入れる。ここに男性が問題意識を持つような文章を入れる。ここに男性が問題意識を持つような文章を入れる。
+          「オ●ニトーク」は誰のための何の目的のコンテンツですか？媒体がユーザーを獲得するための「無料接待ツール」ですか？店舗がコストゼロで集客を期待する「無料営業ツール」ですか？ユーザーが女性と無料で絡むための「チャットツール」ですか？
+          その陰で負担を強いられているのは誰でしょうか？
+          <br />
+          本来は最短距離で予約に促すためのコンテンツではないでしょうか？
         </p>
       </div>
       <div className="flex flex-col gap-3 p-3">
         <Link
           href={`chat`}
-          className="btn bg-gray-800 text-white rounded-lg shadow-md"
+          className="btn bg-gray-800 text-white rounded-lg shadow-md h-[3.5rem] hover:bg-indigo-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +40,7 @@ const IndexPage = () => {
           <span className="text-[1.05rem]">オモニトークを試してみる</span>
         </Link>
         <p className="text-gray-500 text-sm bg-gray-100 py-2 px-4 rounded-lg">
-          オモニトークは某オ〇ニトークを参考に、「重荷」とどう向き合うか？をテーマに既存コンテンツのブラッシュアップを形にしたサンプルです。
+          ここに男性が問題意識を持つような文章を入れる。ここに男性が問題意識を持つような文章を入れる。ここに男性が問題意識を持つような文章を入れる。
         </p>
       </div>
     </div>
